@@ -8,8 +8,43 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```ruby
+typedef enum {
+    GET,
+    POST,
+    PUT,
+    DELETE
+} HTTPMethod;
+
++ (instancetype)shareManager;
+
+- (void)requestWithMethod:(HTTPMethod)method 
+                      url:(NSString *)url 
+                   params:(NSMutableDictionary *)params 
+                  success:(successBlock)success 
+                  failure:(failureBlock)failure;
+
+- (void)requestURL:(NSString *)url 
+            params:(NSMutableDictionary *)params 
+           success:(successBlock)success 
+           failure:(failureBlock)failure;
+
+- (void)requestWithMethod:(HTTPMethod)method 
+                      url:(NSString *)url 
+                   params:(NSMutableDictionary *)params 
+                  success:(successBlock)success 
+                  failure:(failureBlock)failure 
+                   finish:(finishBlock)finish;
+
+- (void)requestURL:(NSString *)url 
+            params:(NSMutableDictionary *)params 
+           success:(successBlock)success 
+           failure:(failureBlock)failure 
+            finish:(finishBlock)finish;
+```
 
 ## Requirements
+AFNetworking
 
 ## Installation
 

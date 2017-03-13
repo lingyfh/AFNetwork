@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AFNetwork'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AFNetwork.'
+  s.summary          = 'Simple request manager about AFNetworking'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,6 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
+  s.public_header_files = 'AFNetwork/*.h', 'AFNetwork/**/*.h'
   s.source_files = 'AFNetwork/Classes/**/*'
   
   # s.resource_bundles = {
@@ -38,5 +39,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking', '~> 3.0'
 end
